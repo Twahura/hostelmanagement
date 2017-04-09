@@ -1,0 +1,62 @@
+<%= form_for(student) do |f| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :seat_id %>
+    <%= f.text_field :seat_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Student_name %>
+    <%= f.text_field :Student_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Institute %>
+    <%= f.text_field :Institute %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Year %>
+    <%= f.text_field :Year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Student_phone_no %>
+    <%= f.text_field :Student_phone_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Address %>
+    <%= f.text_field :Address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Guardians_name %>
+    <%= f.text_field :Guardians_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Guardians_phone_no %>
+    <%= f.text_field :Guardians_phone_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Rent_date %>
+    <%= f.date_select :Rent_date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

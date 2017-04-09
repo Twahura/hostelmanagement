@@ -1,0 +1,42 @@
+<%= form_for(visitor) do |f| %>
+  <% if visitor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(visitor.errors.count, "error") %> prohibited this visitor from being saved:</h2>
+
+      <ul>
+      <% visitor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %>
+    <%= f.text_field :student_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Visitor_name %>
+    <%= f.text_field :Visitor_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Visiting_date %>
+    <%= f.date_select :Visiting_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Relation %>
+    <%= f.text_field :Relation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Visitor_address %>
+    <%= f.text_field :Visitor_address %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

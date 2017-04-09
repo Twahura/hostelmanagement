@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student: one
+  Paid_amount: 1
+  Payment_date: 2017-04-09
+
+two:
+  student: two
+  Paid_amount: 1
+  Payment_date: 2017-04-09

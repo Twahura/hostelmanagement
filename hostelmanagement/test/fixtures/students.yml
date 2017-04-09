@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  seat: one
+  Student_name: MyString
+  Institute: MyString
+  Year: MyString
+  Student_phone_no: MyString
+  Address: MyString
+  Guardians_name: MyString
+  Guardians_phone_no: MyString
+  Rent_date: 2017-04-09
+
+two:
+  seat: two
+  Student_name: MyString
+  Institute: MyString
+  Year: MyString
+  Student_phone_no: MyString
+  Address: MyString
+  Guardians_name: MyString
+  Guardians_phone_no: MyString
+  Rent_date: 2017-04-09

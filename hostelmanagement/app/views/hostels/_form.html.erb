@@ -1,0 +1,27 @@
+<%= form_for(hostel) do |f| %>
+  <% if hostel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hostel.errors.count, "error") %> prohibited this hostel from being saved:</h2>
+
+      <ul>
+      <% hostel.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hostel_name %>
+    <%= f.text_field :hostel_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hostel_address %>
+    <%= f.text_field :hostel_address %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

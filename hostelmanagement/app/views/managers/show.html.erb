@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hostel:</strong>
+  <%= @manager.hostel %>
+</p>
+
+<p>
+  <strong>Manager name:</strong>
+  <%= @manager.manager_name %>
+</p>
+
+<p>
+  <strong>Manager address:</strong>
+  <%= @manager.manager_address %>
+</p>
+
+<p>
+  <strong>Manager phone no:</strong>
+  <%= @manager.manager_phone_no %>
+</p>
+
+<p>
+  <strong>Join date:</strong>
+  <%= @manager.Join_date %>
+</p>
+
+<%= link_to 'Edit', edit_manager_path(@manager) %> |
+<%= link_to 'Back', managers_path %>

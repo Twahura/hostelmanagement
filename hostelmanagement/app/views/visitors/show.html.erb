@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @visitor.student %>
+</p>
+
+<p>
+  <strong>Visitor name:</strong>
+  <%= @visitor.Visitor_name %>
+</p>
+
+<p>
+  <strong>Visiting date:</strong>
+  <%= @visitor.Visiting_date %>
+</p>
+
+<p>
+  <strong>Relation:</strong>
+  <%= @visitor.Relation %>
+</p>
+
+<p>
+  <strong>Visitor address:</strong>
+  <%= @visitor.Visitor_address %>
+</p>
+
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>
