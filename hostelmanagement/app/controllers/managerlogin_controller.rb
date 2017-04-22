@@ -1,0 +1,2 @@
+class ManagerloginController < ApplicationController
+end
