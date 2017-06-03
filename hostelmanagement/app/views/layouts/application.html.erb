@@ -2,19 +2,9 @@
 <html>
   <head>
   <style>
-	button3{
-	font-family: Arial;
-	margin-left:100px;
-	text-bottom:100px;
-	text-top:1000px;
-	}
-	button2{
-	font-family: Arial;
-	text-align:center;
-
-	}
+	
 </style>
-    <title>Rough</title>
+    <title>Hostel Management</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -24,16 +14,13 @@
   <body>
 
   	<% if !user_signed_in? %>
-  	<p class="sign_in"><%= link_to "Click Here For Login Or Sign Up" , new_user_session_path %></p>
+  	<p class="sign_in"><%new_user_session_path %></p>
+
   	<% end %>
 
   	<% if user_signed_in? %>
-  	   <div class="buttons">
-  	    <button2 class="button2"><%= link_to "DATA MANAGEMENT", afterlogin_index_path %></button>
-  	   <button3 class="button3"><%= link_to :logout, destroy_user_session_path, method: :delete  %></button>   
-  	   </div>
-  	<% end %>
-  	
+  	   <p class="sign_in"><%home_index_path %></p>
+  	<% end %>	
 
  	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
