@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :hostel_id %>
-    <%= f.text_field :hostel_id %>
+    <%= f.select :hostel_id, options_for_select(Hostel.all.map { |s| [s.Hostel_name,s.id] }) %>
   </div>
 
   <div class="actions">

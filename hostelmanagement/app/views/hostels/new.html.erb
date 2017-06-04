@@ -1,6 +1,35 @@
+<style>
+	
+	body{
+	background-color: lightblue;	
+	}
+	
+	div {
+	color:black;
+	text-align: center;
+	margin-top:20px;
+	font-size-adjust:1.2e;
+	
+	
+	}
+	h1 {
+	color:black;
+	text-align: center;
+	font-family: algerian;
+	font-size-adjust:1.2e;
+	
+	margin-top: 100px;
+	}
+	button{
+     text-align: center;
+     margin-left: 650px;
+     margin-top: 30px;
+	}
+<body>
+</style>
 
 <h1>New Hostel</h1>
 <%= render 'form', hostel: @hostel %>
 
-<%= link_to 'Back', hostels_path %>
-	
+<button><%= link_to 'Back', hostels_path %></button>
+</body>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'after_signin/index'
+
   resources :visitors
   resources :payments
   resources :students

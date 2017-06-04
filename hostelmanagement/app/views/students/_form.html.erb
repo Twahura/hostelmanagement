@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :seat_id %>
-    <%= f.text_field :seat_id %>
+    <%= f.select :seat_id, options_for_select(Seat.all.map { |s| [s.id] }) %>
   </div>
 
   <div class="field">

@@ -1,34 +1,65 @@
 <p id="notice"><%= notice %></p>
 <style>
 	body{
-background:powderblue;	
-	font-family: lucida grande,tahoma,verdana,arial,sans-serif;
-}
-body p{
-font-size:0.8em;
-line-height:1.28em;
-}
+  background-color: powderblue; 
+  }
+  h1 {
+    font-family: cooper black;
+    text-align:center;
+    color:black;
+      
+  }
+  
+  p {
+    
+    margin: 0 100px 20px 100px;
+    font-size:1.5em;
+    font-weight:bold;
+  }
+  
+  
 
-h1{
+  input{
+    border:3px solid #666;
+    font-weight:bold;
+  }
+  
+  
+  td{
+    height:50px;
+    width:100px;
+    padding:20px;
+    font-weight:bold;
+  }
+  table{
+    background-color: white;
+    font-family: arial;
+    border:5px solid black;
+    margin: auto; 
+    padding:40px;
+  }
+  
+  .button1{
+  font-family: Arial;
+  font-size:1.3em;
+  margin-left: 480px;
+  }
 
-	font-family: cooper black;
-	margin-left:500px;
-}
-table{
-		background-color: white;
-		font-family: arial;
-		border:5px solid black;
-		margin-left:280px;
-		
-		padding:50px;
-	}
+  .button2{
+  font-family: Arial;
+  font-size:1.3em;
+  margin-left: 30px;
+  
+  }
+
 </style>
 <h1>Payments</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Student</th>
+      <th>Student No</th>
+      <th>Student's Name</th>
       <th>Paid amount</th>
       <th>Payment date</th>
       <th colspan="3"></th>
@@ -38,7 +69,8 @@ table{
   <tbody>
     <% @payments.each do |payment| %>
       <tr>
-        <td><%= payment.student %></td>
+        <td><%= payment.student.id %></td>
+        <td><%= payment.student.Student_name %></td>
         <td><%= payment.Paid_amount %></td>
         <td><%= payment.Payment_date %></td>
         <td><%= link_to 'Show', payment %></td>
@@ -51,4 +83,8 @@ table{
 
 <br>
 
-<%= link_to 'New Payment', new_payment_path %>
+<div class="buttons1">
+        <button class="button1"><%= link_to "Insert New Payment", new_payment_path %></button>
+        <button class="button2"><%= link_to "Back", after_signin_index_path %></button>
+</div>
+

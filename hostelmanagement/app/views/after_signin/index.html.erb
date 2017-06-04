@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Home Page</title>
+	<style type="text/css">
+	
+body{
+background:#e9e9e9;	
+font-family: lucida grande,tahoma,verdana,arial,sans-serif;
+}
+
+#wrapper{
+width:1080px;
+margin-bottom: 20px;
+background-color:white;
+margin:0 auto;
+padding:10px;
+border:5px solid black;
+
+}
+
+h1{
+font-family: cooper black;
+text-align:center;
+font-size: 35px;
+}
+
+h2{
+color:black;
+text-align:center;
+margin-top:10px;
+}
+
+h3{
+	margin-top: 100px;
+	padding: 10px;
+	border: 5px solid black;
+	text-align: center;
+	font-size: 30px;
+}
+
+h4{
+color:black;
+margin-top:10px;
+margin-left:10px;
+font-size: 22px;	
+}
+
+li{
+font-weight:bold;
+margin-left:10px;
+font-size: 18px;	
+}
+
+.container{
+font-family: arial;	
+margin-top:100px;
+margin-bottom: 100px;
+background-color: powderblue;
+border:5px solid black;
+padding: 50px;
+
+}
+
+
+ul#nav,ul.sub1{
+list-style-type:none;
+font-size:15pt;
+
+}
+ul#nav li{
+
+font-size:25px;
+float:left;
+position:relative;
+text-align:center;
+width:250px;
+height:35px;
+margin-right:4px;
+}
+
+ul#nav a:link,nav a:active, nav a:visited{ 
+display:block;
+color:black;
+text-decoration:none;
+width:240px;
+height:30px;
+line-height:30px;
+background-color:powderblue;
+border:2px solid black;
+border-radius:5px;
+
+}
+ul#nav .sub1 a{
+
+	margin-top:3px;
+
+}
+ul#nav li:hover >a{
+	background-color:blue;
+	
+	
+}
+ul#nav li:hover a:hover{
+	background-color:#fff;
+    color:blue;
+
+}
+ul#nav .sub1{
+	display:none;
+    position:absolute;
+    top:26px;
+	left:0px;
+}
+
+ul#nav .sub1 li{	
+	margin-top:5px;
+	
+	
+}
+
+ul#nav li:hover .sub1{
+	display: block;
+}
+.darrow{
+	font-size:15pt;
+	position:absolute;
+	top:3px;
+	right:4px;
+}
+
+
+
+	</style>	
+
+</head>
+
+<body class="homepage">
+    <div id="wrapper">
+			<h1>WELCOME! Mr.Manager! </h1>
+			<h2>You can access all the following informations as a manager!</h2>
+			<nav id="navigation">
+				<ul id="nav">
+				<li><%= link_to "HOME", root_path %></li>
+					
+				<li><a href="#">EDIT DATABASE</a><span class="darrow">&#9660;</span>
+				
+					<ul class="sub1">
+						<li><%= link_to "HOSTEL", hostels_path %></li>
+						<li><%= link_to "MANAGER", managers_path %></li>
+						<li><%= link_to "SEATS", seats_path %></li>
+						<li><%= link_to "STUDENTS", students_path %></li>
+						
+						<li><%= link_to "PAYMENTS", payments_path %></li>
+						<li><%= link_to "VISITORS", visitors_path %></li>
+					</ul>
+				</li>
+				<li><%= link_to :LOGOUT, destroy_user_session_path, method: :delete  %></li>   
+			</nav>
+
+			<h3>INSTRUCTIONS:</h3>
+			<div id="container">
+			
+			<h4>EDIT DATABASE:</h4>
+			<li>Select table from drop-down menu of 'EDIT DATABASE'.</li>
+			<li>Data of the selected table will be shown with 'show','edit' and 'destroy' options for each data.</li>
+			<li>Click on 'show' option to view the respective data.</li>
+			<li>In order to edit specific entry, click on 'edit' option.</li>
+			<li>To delete an entry click on the 'destroy' option.</li>
+			<li>For inserting new data in the table go to 'insert' option shown at the botom of the table.</li>
+			</div>
+	</div>
+</body>
+</html>

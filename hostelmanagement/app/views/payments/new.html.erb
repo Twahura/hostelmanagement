@@ -1,5 +1,39 @@
-<h1>New Payment</h1>
+<style>
+	
+	body{
+	background-color: lightblue;	
+	}
+	
+	div {
+	color:black;
+	text-align: center;
+	margin-top:20px;
+	font-size-adjust:1.2e;
+	
+	
+	}
+	h1 {
+	color:black;
+	text-align: center;
+	font-family: algerian;
+	font-size-adjust:1.2e;
+	
+	margin-top: 100px;
+	}
+	button{
+     text-align: center;
+     margin-left: 650px;
+     margin-top: 30px;
+	}
 
-<%= render 'form', payment: @payment %>
+	</style>
 
-<%= link_to 'Back', payments_path %>
+	<body>
+		<h1>New Payment</h1>
+
+	<%= render 'form', payment: @payment %>
+
+	<button><%= link_to 'Back', payments_path %></button>
+
+	</body>
+

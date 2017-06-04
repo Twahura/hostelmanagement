@@ -1,27 +1,58 @@
 <p id="notice"><%= notice %></p>
 <style>
 	body{
-background:powderblue;	
-	font-family: lucida grande,tahoma,verdana,arial,sans-serif;
-}
-body p{
-font-size:0.8em;
-line-height:1.28em;
-}
+  background-color: powderblue; 
+  }
+  h1 {
+    font-family: cooper black;
+    text-align:center;
+    color:black;
+      
+  }
+  
+  p {
+    
+    margin: 0 100px 20px 100px;
+    font-size:1.5em;
+    font-weight:bold;
+  }
+  
+  
 
-h1{
+  input{
+    border:3px solid #666;
+    font-weight:bold;
+  }
+  
+  
+  td{
+    height:50px;
+    width:100px;
+    padding:20px;
+    font-weight:bold;
+  }
+  table{
+    background-color: white;
+    font-family: arial;
+    border:5px solid black;
+    margin: auto;
+    
+    padding:40px;
+  }
+  
+  .button1{
+  font-family: Arial;
+  font-size:1.3em;
+  margin-left: 480px;
+  }
 
-	font-family: cooper black;
-	margin-left:500px;
-}
-table{
-		background-color: white;
-		font-family: arial;
-		border:5px solid black;
-		margin-left:200px;
-		
-		padding:50px;
-	}
+  .button2{
+  font-family: Arial;
+  font-size:1.3em;
+  margin-left: 30px;
+  
+  }
+
 </style>
 
 <h1>Visitors</h1>
@@ -30,8 +61,8 @@ table{
   <thead>
     <tr>
       <th>Student</th>
-      <th>Visitor name</th>
-      <th>Visiting date</th>
+      <th>Visitor's Name</th>
+      <th>Visiting Date</th>
       <th>Relation</th>
       <th>Visitor address</th>
       <th colspan="1"></th>
@@ -41,7 +72,7 @@ table{
   <tbody>
     <% @visitors.each do |visitor| %>
       <tr>
-        <td><%= visitor.student %></td>
+        <td><%= visitor.student.Student_name %></td>
         <td><%= visitor.Visitor_name %></td>
         <td><%= visitor.Visiting_date %></td>
         <td><%= visitor.Relation %></td>
@@ -56,4 +87,7 @@ table{
 
 <br>
 
-<%= link_to 'New Visitor', new_visitor_path %>
+<div class="buttons1">
+        <button class="button1"><%= link_to "Insert New Visitor", new_visitor_path %></button>
+        <button class="button2"><%= link_to "Back", after_signin_index_path %></button>
+</div>

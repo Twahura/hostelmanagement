@@ -1,5 +1,37 @@
+<style>
+	
+	body{
+	background-color: lightblue;	
+	}
+	
+	div {
+	color:black;
+	text-align: center;
+	margin-top:20px;
+	font-size-adjust:1.2e;
+	
+	
+	}
+	h1 {
+	color:black;
+	text-align: center;
+	font-family: algerian;
+	font-size-adjust:1.2e;
+	
+	margin-top: 100px;
+	}
+	button{
+     text-align: center;
+     margin-left: 650px;
+     margin-top: 30px;
+	}
+	
+	
+</style>
+
+
 <h1>New Student</h1>
 
 <%= render 'form', student: @student %>
 
-<%= link_to 'Back', students_path %>
+<button><%= link_to 'Back', students_path %></button>
